@@ -10,12 +10,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("/application-context.xml");
 
         Message ping = (Message) applicationContext.getBean("pingMessage");
-        Message hello = (Message) applicationContext.getBean("helloMessage");
-        Message pingReply = (Message) applicationContext.getBean("pingMessageReply");
+        Message hello = (Message) applicationContext.getBean("customMessage");
+        Message pingReply = (Message) applicationContext.getBean("replyMessage");
 
         Writer stdoutWriter = (Writer) applicationContext.getBean("stdoutWriter");
         Writer listWriter = (Writer) applicationContext.getBean("listWriter");
